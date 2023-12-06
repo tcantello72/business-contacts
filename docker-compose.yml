@@ -1,0 +1,15 @@
+# services list the apps we want to run
+services:
+  # name of first service
+  api:
+    # path with Dockerfile
+    build: ./server
+    # port exposed in Dockerfile
+    ports: 
+      - 3000:3000
+
+  # name of second service
+  client:
+    build: ./client
+    ports:
+      - 1234:1234
